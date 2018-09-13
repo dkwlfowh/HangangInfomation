@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="21"
+        android:background="#5C000000"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_weight="21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:background="@drawable/tback"
+                android:id="@+id/back"
+                android:layout_width="33.33dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content">
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivpark"
+                android:layout_weight="12"
+                android:layout_width="95.33dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mangwon1" />
+
+            <Button
+                android:id="@+id/weather"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:background="#00000000"
+                android:text="4%"
+                android:textColor="#ffffff"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="163.5"
+        android:orientation="vertical">
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="90" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="64.5"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="12.5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/structureName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:layout_gravity="center"
+                        android:text="잠원5주차장 (암사나들목 앞)"
+                        android:textColor="#ffffff"
+                        android:textSize="8pt"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal">
+
+                        <ImageButton
+                            android:id="@+id/Home"
+                            android:layout_width="28.33dp"
+                            android:layout_height="28.33dp"
+                            android:background="@drawable/url"
+                            android:src="@drawable/circle_border5"
+                            android:text="url" />
+
+                        <ImageButton
+                            android:id="@+id/call"
+                            android:layout_width="28.33dp"
+                            android:layout_height="28.33dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/call"
+                            android:src="@drawable/circle_border5"
+                            android:text="버튼" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:background="#3c3c3c"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="56">
+
+                    <TextView
+                        android:id="@+id/infomation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:lineSpacingExtra="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#ffffff"
+                        android:scrollbars="vertical"
+                        android:textSize="6pt" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

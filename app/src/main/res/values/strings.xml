@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">한강앱</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_mangwon">MangwonActivity</string>
+    <string name="ip">172.16.111.69</string>
+    <string name="title_activity_wearher">WearherActivity</string>
+</resources>

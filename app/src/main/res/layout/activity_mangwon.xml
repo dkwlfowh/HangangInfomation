@@ -1,0 +1,1782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical"
+    tools:context="com.example.makertest.MainActivity">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="21"
+        android:background="#5C000000"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="21"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="33.33dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/tback" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivhome"
+                android:layout_width="95.33dp"
+                android:layout_height="30dp"
+                android:layout_weight="12"
+                android:src="@drawable/mangwon1" />
+
+            <Button
+                android:id="@+id/weather"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:background="#00000000"
+                android:text="4%"
+                android:textColor="#ffffff"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="163.5">
+
+        <TabHost
+            android:id="@+id/host"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="151.5">
+
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="70"
+                            tools:ignore="Suspicious0dp">
+
+                            <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                                android:id="@+id/autoViewPager"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"></cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/title_view"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="● ○ ○"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="6"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="72.5"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="9"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="10"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="■ 주소 :"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="7"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="서울시 마포구 마포나루길 467 (망원동 205-4)"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="■ 면적 (길이) :"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="7"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="422,347㎡ (7.4㎞)"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="■ 관할구역 :"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="7"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="만초천교 전 ~ 홍제천교 전"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="■ 오시는 길 :"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="7"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="마포대교 → 강변북로 → 망원공원 진입"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="■ 버스 안내 :"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="7"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="마포09번 , 마포16번"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="■ 안내센터 :"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="7"
+                                            android:gravity="center_vertical"
+                                            android:lineSpacingExtra="3dip"
+                                            android:text="02) 3780-0601~3"
+                                            android:textColor="#ffffff"
+                                            android:textSize="6pt" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"></LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <fragment
+                            android:id="@+id/fragment"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="110" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="41.5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <HorizontalScrollView
+                                android:id="@+id/first"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:scrollbarAlwaysDrawVerticalTrack="true"
+                                android:scrollbarFadeDuration="0"
+                                android:scrollbarThumbHorizontal="@color/colorAccent"
+                                android:scrollbars="horizontal">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="32.5"
+                                        android:orientation="horizontal">
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/btn1"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/exercise"
+                                                android:src="@drawable/circle_border2" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/btn1"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="운동시설"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/btn2"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/rent"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/btn2"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="대여시설"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/btn3"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/tlshop"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/btn3"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="매점"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/btn4"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/restroom"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/btn4"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="화장실"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/btn5"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/tlpark"
+                                                android:src="@drawable/circle_border2" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/btn5"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="공원"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/btn6"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/parking"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/btn6"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="주차장"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/btn7"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/water"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/btn7"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="수상시설"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_marginRight="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/btn8"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/etc"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/btn8"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="기타"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+                            <LinearLayout
+                                android:id="@+id/exercise"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="invisible">
+
+                                <RelativeLayout
+                                    android:layout_width="66.7dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/btn1back"
+                                        android:layout_width="66.7dp"
+                                        android:layout_height="66.7dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@drawable/exercise1"
+                                        android:src="@drawable/circle_border2" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/btn1back"
+                                        android:layout_marginTop="13dp"
+                                        android:gravity="center"
+                                        android:text="운동시설"
+                                        android:textColor="#000000"
+                                        android:textSize="7pt"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+
+                                <HorizontalScrollView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                                    android:scrollbarFadeDuration="0"
+                                    android:scrollbarThumbHorizontal="@color/colorAccent"
+                                    android:scrollbars="horizontal">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/soccer"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/soccer"
+                                                android:src="@drawable/circle_border2" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/soccer"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="축구"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/basket"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/basket"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/basket"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="농구"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/volley"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/volley"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/volley"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="배구"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/tennis"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/tennis"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tennis"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="테니스"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/base"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/base"
+                                                android:src="@drawable/circle_border2" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/base"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="야구"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/swim"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/swim"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/swim"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="수영"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/backexer"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/back"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/backexer"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="돌아가기"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/rent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="invisible">
+
+                                <RelativeLayout
+                                    android:layout_width="66.7dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/btn2back"
+                                        android:layout_width="66.7dp"
+                                        android:layout_height="66.7dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@drawable/rent1"
+                                        android:src="@drawable/circle_border2" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/btn2back"
+                                        android:layout_marginTop="13dp"
+                                        android:gravity="center"
+                                        android:text="대여시설"
+                                        android:textColor="#000000"
+                                        android:textSize="7pt"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+
+                                <HorizontalScrollView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                                    android:scrollbarFadeDuration="0"
+                                    android:scrollbarThumbHorizontal="@color/colorAccent"
+                                    android:scrollbars="horizontal">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/bike"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/bike"
+                                                android:src="@drawable/circle_border2" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/bike"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="자전거"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/baby"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/baby"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/baby"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="유모차"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/wheelchair"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/wheelchair"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/wheelchair"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="휠체어"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/backrent"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/back"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/backrent"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="돌아가기"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tlshop"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="invisible">
+
+                                <RelativeLayout
+                                    android:layout_width="66.7dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/btn3back"
+                                        android:layout_width="66.7dp"
+                                        android:layout_height="66.7dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@drawable/tlshop1"
+                                        android:src="@drawable/circle_border2" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/btn3back"
+                                        android:layout_marginTop="13dp"
+                                        android:gravity="center"
+                                        android:text="매점"
+                                        android:textColor="#000000"
+                                        android:textSize="7pt"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+
+                                <HorizontalScrollView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                                    android:scrollbarFadeDuration="0"
+                                    android:scrollbarThumbHorizontal="@color/colorAccent"
+                                    android:scrollbars="horizontal">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/shop"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/shop"
+                                                android:src="@drawable/circle_border2" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/shop"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="매점"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/cafe"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/cafe"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/cafe"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="카페"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/backshop"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/back"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/backshop"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="돌아가기"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tlpark"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="invisible">
+
+                                <RelativeLayout
+                                    android:layout_width="66.7dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/btn5back"
+                                        android:layout_width="66.7dp"
+                                        android:layout_height="66.7dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@drawable/tlpark1"
+                                        android:src="@drawable/circle_border2" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/btn5back"
+                                        android:layout_marginTop="13dp"
+                                        android:gravity="center"
+                                        android:text="공원"
+                                        android:textColor="#000000"
+                                        android:textSize="7pt"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+
+                                <HorizontalScrollView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                                    android:scrollbarFadeDuration="0"
+                                    android:scrollbarThumbHorizontal="@color/colorAccent"
+                                    android:scrollbars="horizontal">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/play"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/play"
+                                                android:src="@drawable/circle_border2" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/play"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="놀이터"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/park"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/park"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/park"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="공원"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/backtlpark"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/back"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/backtlpark"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="돌아가기"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/water"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="invisible">
+
+                                <RelativeLayout
+                                    android:layout_width="66.7dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/btn7back"
+                                        android:layout_width="66.7dp"
+                                        android:layout_height="66.7dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@drawable/water1"
+                                        android:src="@drawable/circle_border2" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/btn7back"
+                                        android:layout_marginTop="13dp"
+                                        android:gravity="center"
+                                        android:text="수상시설"
+                                        android:textColor="#000000"
+                                        android:textSize="7pt"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+
+                                <HorizontalScrollView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                                    android:scrollbarFadeDuration="0"
+                                    android:scrollbarThumbHorizontal="@color/colorAccent"
+                                    android:scrollbars="horizontal">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/dock"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/dock"
+                                                android:src="@drawable/circle_border2" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/dock"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="선착장"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/wtaxi"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/wtaxi"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/wtaxi"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="수상택시"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/wtg"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/wtg"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/wtg"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="수상훈련"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/wleisure"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/wleisure"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/wleisure"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="수상레저"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/fishing"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/fishing"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/fishing"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="낚시"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/backwater"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/back"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/backwater"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="돌아가기"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/etc"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:visibility="invisible">
+
+                                <RelativeLayout
+                                    android:layout_width="66.7dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageButton
+                                        android:id="@+id/btn8back"
+                                        android:layout_width="66.7dp"
+                                        android:layout_height="66.7dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@drawable/etc1"
+                                        android:src="@drawable/circle_border2" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/btn8back"
+                                        android:layout_marginTop="13dp"
+                                        android:gravity="center"
+                                        android:text="기타"
+                                        android:textColor="#000000"
+                                        android:textSize="7pt"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+
+                                <HorizontalScrollView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                                    android:scrollbarFadeDuration="0"
+                                    android:scrollbarThumbHorizontal="@color/colorAccent"
+                                    android:scrollbars="horizontal">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/infoc"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/infoc"
+                                                android:src="@drawable/circle_border2" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/infoc"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="안내센터"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/police"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/police"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/police"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="경찰서"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_weight="40"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <ImageButton
+                                                android:id="@+id/backetc"
+                                                android:layout_width="66.7dp"
+                                                android:layout_height="66.7dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="@drawable/back"
+                                                android:src="@drawable/circle_border2" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/backetc"
+                                                android:layout_marginTop="13dp"
+                                                android:gravity="center"
+                                                android:text="돌아가기"
+                                                android:textColor="#ffffff"
+                                                android:textSize="7pt" />
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+                            </LinearLayout>
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tab3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fillViewport="true">
+
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/card_recycler_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:divider="#000000"
+                                    android:dividerHeight="4dp"
+                                    android:scrollbars="vertical" />
+
+
+                            </ScrollView>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/refresh"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_margin="10dp"
+                                    android:background="@drawable/refresh"
+                                    android:src="@drawable/circle_border4" />
+
+
+                                <ImageButton
+                                    android:id="@+id/btnadd"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_margin="10dp"
+                                    android:background="@drawable/plus"
+                                    android:src="@drawable/circle_border4"
+                                    android:text="등록" />
+                            </RelativeLayout>
+                        </FrameLayout>
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="12" />
+
+
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+</LinearLayout>
